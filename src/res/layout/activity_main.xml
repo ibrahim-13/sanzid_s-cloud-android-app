@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sanzidblog.arshad.sohojweb.net.sanzidscloud.Main">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar_circle"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/buttonBack"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="webViewBack"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/ic_app_left" />
+
+    <Button
+        android:id="@+id/buttonForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonBack"
+        android:layout_toEndOf="@+id/buttonBack"
+        android:onClick="webViewForward"
+        android:background="@mipmap/ic_app_right"/>
+
+    <WebView
+        android:id="@+id/mainWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttonBack" />
+</RelativeLayout>
